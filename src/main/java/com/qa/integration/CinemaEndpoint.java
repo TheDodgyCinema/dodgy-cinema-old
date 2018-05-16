@@ -9,7 +9,11 @@ import javax.ws.rs.Produces;
 
 import com.qa.business.service.ICinemaService;
 
-@Path("/movie")
+@Path("test")
 public class CinemaEndpoint {
-
+	@GET
+	@Produces("application/json")
+	public String sayHello() {
+		return "{\"message\": \"Hello my dodgy friend!\")";
+	}
 }
