@@ -27,5 +27,4 @@ public class CinemaDBRepository implements ICinemaRepository {
 		TypedQuery<HelloWorld> query = manager.createQuery("SELECT h FROM HelloWorld h", HelloWorld.class);
 		return query.getResultList();
 	}
-
 }

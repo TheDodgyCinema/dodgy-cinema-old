@@ -1,0 +1,40 @@
+<html>
+<body>
+
+<h1>OMDB Gaurdians Test</h1>
+
+<p id="a"></p>
+
+<h1>Hello Friends Test</h1>
+
+<p id="b"></p>
+
+<script>
+    var requestURL = 'http://www.omdbapi.com/?i=tt3896198&apikey=39f57812';
+    var get = new XMLHttpRequest();
+    get.open('GET', requestURL);
+    get.responseType ='json';
+    get.send();
+    
+    var requestURL1 = 'http://52.56.36.69:8080/dodgy-cinema/api/test';
+    var get1 = new XMLHttpRequest();
+    open('GET', requestURL1);
+    get1.responseType ='json';
+    get1.send();
+    
+    window.onload = function() {
+   
+    var hello = get1.response;
+    console.log(hello);
+    
+    //document.getElementById("b").innerHTML = "Message: " + hello.message + " Friends: " + hello.friends;
+    
+    var movie = get.response;
+    console.log(movie);
+    
+    document.getElementById("a").innerHTML = "Title: " + movie.Title + " Year: " + movie.Year;
+    }
+    
+</script>
+</body>
+</html>
