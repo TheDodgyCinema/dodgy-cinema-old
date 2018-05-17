@@ -13,6 +13,10 @@ public class HelloWorld {
 	@Column
 	private String name;
 	
+	public HelloWorld() {
+		
+	}
+	
 	HelloWorld(String name){
 		this.name = name;
 	}
