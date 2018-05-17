@@ -11,9 +11,12 @@ import com.qa.business.service.ICinemaService;
 
 @Path("test")
 public class CinemaEndpoint {
+	@Inject
+	private ICinemaService service;
+
 	@GET
 	@Produces("application/json")
 	public String sayHello() {
-		return "{\"message\": \"Hello my dodgy friend!\")";
+		return service.sayHello();
 	}
 }
